@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RENT CARS KOUBAA — Location de voitures de luxe à Tanger</title>
+  <style>
+    :root {
+      --accent:#06b6d4;
+      --dark:#0f172a;
+      --light:#f9fafb;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(180deg,#0a0f1e,#1b2735);
+      color:white;
+      overflow-x:hidden;
+    }
+    header{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:20px 40px;background:rgba(0,0,0,0.5);
+      position:sticky;top:0;backdrop-filter:blur(8px);z-index:10;
+    }
+    h1{font-size:22px;font-weight:700;color:#00bcd4}
+    .contact{font-size:14px;text-align:right}
+    .contact a{color:var(--accent);text-decoration:none}
+    .hero-carousel{position:relative;overflow:hidden;height:380px;margin-bottom:40px}
+    .hero-carousel img{
+      width:100%;height:380px;object-fit:cover;
+      animation:fadeSlide 32s infinite;
+      position:absolute;top:0;left:0;opacity:0;
+    }
+    @keyframes fadeSlide {
+      0%{opacity:0}
+      5%{opacity:1}
+      25%{opacity:1}
+      30%{opacity:0}
+      100%{opacity:0}
+    }
+    .hero-carousel img:nth-child(1){animation-delay:0s}
+    .hero-carousel img:nth-child(2){animation-delay:8s}
+    .hero-carousel img:nth-child(3){animation-delay:16s}
+    .hero-carousel img:nth-child(4){animation-delay:24s}
+    .fleet{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;padding:0 40px 60px}
+    .car{
+      background:rgba(255,255,255,0.05);
+      border-radius:14px;
+      overflow:hidden;
+      transition:transform .3s, box-shadow .3s;
+      position:relative;
+    }
+    .car:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 15px 35px rgba(0,0,0,0.4)}
+    .car img{width:100%;height:160px;object-fit:cover;display:block}
+    .car-info{padding:14px}
+    .car-info h3{margin-bottom:6px;font-size:18px;color:#e0f7fa}
+    .car-info p{font-size:13px;color:#9ca3af}
+    .badge{
+      position:absolute;top:10px;left:10px;
+      background:rgba(0,0,0,0.6);
+      padding:5px 10px;border-radius:20px;
+      font-size:13px;font-weight:600;
+    }
+    .price{
+      position:absolute;bottom:10px;right:10px;
+      background:var(--accent);color:#042023;
+      padding:8px 12px;border-radius:10px;font-weight:700;
+    }
+    footer{
+      background:rgba(0,0,0,0.7);
+      text-align:center;padding:15px 10px;font-size:13px;color:#b9e8ee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚗 RENT CARS KOUBAA</h1>
+    <div class="contact">
+      <div>📍 Rue Luxe N°7, Soco Alto, Tanger</div>
+      <div>📞 <a href="tel:+212682455446">+212 682 455 446</a></div>
+      <div>✉ <a href="mailto:mohammedkoubaa2005@gmail.com">mohammedkoubaa2005@gmail.com</a></div>
+    </div>
+  </header>
+
+  <!-- Carrousel luxe -->
+  <div class="hero-carousel">
+    <img src="https://seriesseservice.com/wp-content/uploads/2024/10/Mercedes-G63-AMG.jpg" alt="Mercedes G63">
+    <img src="https://motorsactu.com/wp-content/uploads/2023/05/Porsche-Cayenne-2023-2024-2.jpg" alt="Porsche Cayenne">
+    <img src="https://gvelondon.com/wp-content/uploads/2024/04/168-18-2-scaled.jpg" alt="Mercedes Vito">
+    <img src="https://www.alainclass.com/wp-content/uploads/2016/09/1170-Viano-3051-11-copy.jpg" alt="Mercedes Viano">
+  </div>
+
+  <section class="fleet">
+    <div class="car">
+      <img src="data:image/jpeg;base64,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" alt="Clio 5 Alpine">
+      <div class="badge">x10</div><div class="price">250 dh</div>
+      <div class="car-info"><h3>Clio 5 Alpine</h3><p>Élégante, compacte et économique.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://www.automobile-magazine.fr/asset/cms/840x394/156615/config/110013/a-priori-plus-lourde-de-300-kg-quune-208-thermique-cette-version-100-electrique-semble-bien-se-debrouiller-sur-la-route.jpg" alt="Peugeot 208 GT">
+      <div class="badge">x15</div><div class="price">300 dh</div>
+      <div class="car-info"><h3>Peugeot 208 GT</h3><p>Confort moderne, design sportif.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://www.gutentag.news/wp-content/uploads/2023/09/P1023730.jpg" alt="Peugeot 308">
+      <div class="badge">x5</div><div class="price">500 dh</div>
+      <div class="car-info"><h3>Peugeot 308</h3><p>Berline dynamique et raffinée.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c680-d465/content/medias/images/test_drives/10000/400/40/2021-vw-golf-gtd-1.jpg" alt="Golf 8 GTD">
+      <div class="badge">x6</div><div class="price">600 dh</div>
+      <div class="car-info"><h3>Golf 8 GTD</h3><p>Performance et confort allemand.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://i.bstr.es/highmotor/2025/01/IMG_9093photo-2-scaled-e1736247166440-1280x756.jpg" alt="Seat Ibiza">
+      <div class="badge">x5</div><div class="price">400 dh</div>
+      <div class="car-info"><h3>Seat Ibiza</h3><p>Urbaine, stylée et agile.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://rentedrive.it/wp-content/uploads/2024/08/Nuova-Cupra-Formentor.jpg" alt="Cupra Formentor">
+      <div class="badge">x5</div><div class="price">700 dh</div>
+      <div class="car-info"><h3>Cupra Formentor</h3><p>Design audacieux et moteur puissant.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://mauto.ma/images/volkswagen-touareg-facelift-2024-maroc.jpg" alt="Touareg">
+      <div class="badge">x2</div><div class="price">1200 dh</div>
+      <div class="car-info"><h3>Volkswagen Touareg</h3><p>SUV de prestige et confort absolu.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://images.prismic.io/carwow/aCx9aSdWJ-7kSWE-_VolkswagenTiguan2025exteriorfrontviewdrivinghero.jpg?auto=format&cs=tinysrgb&fit=max&q=60" alt="Tiguan">
+      <div class="badge">x2</div><div class="price">1000 dh</div>
+      <div class="car-info"><h3>Volkswagen Tiguan</h3><p>Compact SUV polyvalent.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://www.inghamdriven.nz/wp-content/files/stock/CNM/11177/23607_01.jpg?width=2048&optimize=medium" alt="Mercedes G63">
+      <div class="badge">x1</div><div class="price">3800 dh</div>
+      <div class="car-info"><h3>Mercedes G63 AMG</h3><p>Symbole du luxe et de la puissance.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://www.autovisie.nl/wp-content/uploads/2021/07/Porsche-Cayenne-Turbo-GT-standaard-006.jpg" alt="Porsche Cayenne">
+      <div class="badge">x2</div><div class="price">3000 dh</div>
+      <div class="car-info"><h3>Porsche Cayenne</h3><p>Élégance et performance sportive.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://sf2.autojournal.fr/wp-content/uploads/autojournal/2024/09/3-7.jpg" alt="Dacia Logan">
+      <div class="badge">x10</div><div class="price">250 dh</div>
+      <div class="car-info"><h3>Dacia Logan</h3><p>Fiabilité et économie assurée.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://gvelondon.com/wp-content/uploads/2024/04/168-18-2-scaled.jpg" alt="Mercedes Vito">
+      <div class="badge">x1</div><div class="price">4000 dh</div>
+      <div class="car-info"><h3>Mercedes Vito</h3><p>Transport VIP et grand confort.</p></div>
+    </div>
+
+    <div class="car">
+      <img src="https://www.alainclass.com/wp-content/uploads/2016/09/1170-Viano-3051-11-copy.jpg" alt="Mercedes Viano">
+      <div class="badge">x1</div><div class="price">4000 dh</div>
+      <div class="car-info"><h3>Mercedes Viano</h3><p>Minivan premium et spacieux.</p></div>
+    </div>
+  </section>
+<div class="car">
+  <img src="URL_DE_LA_VOITURE" alt="Nom de la voiture">
+  <div class="car-info">
+    <h3>Mercedes G63</h3>
+    <p>Année : 2023 | Sièges : 5 | Transmission : Automatique</p>
+    <p class="price">500€/jour</p>
+  </div>
+  <div class="car-command">
+    <button onclick="alert('Réservation envoyée pour Mercedes G63 !')">Réserver</button>
+  </div>
+</div>
+
+  <footer>
+    © 2025 RENT CARS KOUBAA — Rue Luxe N°7, Soco Alto, Tanger — +212 682 455 446
+  </footer>
+</body>
+</html>
